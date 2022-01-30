@@ -16,7 +16,7 @@ This template has the minimum variables defined, but you can find additional det
 https://github.com/dmagyar/prusaslicer-vnc-docker&#xD;
 https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Overview>
   <Category>HomeAutomation: Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:6080]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://cdn.help.prusa3d.com/wp-content/uploads/PSlogo-1-300x300.jpg</Icon>
   <ExtraParams/>
