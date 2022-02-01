@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/mikeah/prusaslicer-novnc/</Support>
+  <Support>https://hub.docker.com/r/mikeah/prusaslicer-novnc</Support>
   <Project>https://www.prusa3d.com/prusaslicer/</Project>
   <Overview>Enjoy Prusaslicer directly in your browser with this easy to use Docker container.&#xD;
 &#xD;
@@ -48,7 +48,15 @@ https://hub.docker.com/r/mikeah/prusaslicer-novnc</Description>
       <Mode>rw</Mode>
     </Volume>
   </Data>
+  <Environment>
+    <Variable>
+      <Value>/etc/ssl/certs/ca-certificates.crt</Value>
+      <Name>SSL_CERT_FILE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Root Folder/Data" Target="/root/" Default="/mnt/cache/appdata/prusaslicer" Mode="rw" Description="Container Path: /root/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/prusaslicer</Config>
   <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="SSL_CERT_FILE" Target="SSL_CERT_FILE" Default="/etc/ssl/certs/ca-certificates.crt" Mode="" Description="Needed to allow Prusaslicer to open without any prompts upon startup." Type="Variable" Display="always" Required="true" Mask="false">/etc/ssl/certs/ca-certificates.crt</Config>
 </Container>
