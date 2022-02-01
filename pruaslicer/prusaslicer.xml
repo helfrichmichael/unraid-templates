@@ -1,22 +1,22 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>prusaslicer-vnc-docker</Name>
-  <Repository>dmagyar/prusaslicer-vnc-docker</Repository>
-  <Registry>https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Registry>
+  <Name>prusaslicer-novnc</Name>
+  <Repository>mikeah/prusaslicer-novnc</Repository>
+  <Registry>https://hub.docker.com/r/mikeah/prusaslicer-novnc</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Support>
+  <Support>https://hub.docker.com/r/mikeah/prusaslicer-novnc/</Support>
   <Project>https://www.prusa3d.com/prusaslicer/</Project>
-  <Overview>Built by MikeAH for unraid users to enjoy the ease of prusaslicer in their browser.&#xD;
+  <Overview>Enjoy Prusaslicer directly in your browser with this easy to use Docker container.&#xD;
 &#xD;
 This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
 &#xD;
-https://github.com/dmagyar/prusaslicer-vnc-docker&#xD;
-https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Overview>
+https://github.com/mikeah/prusaslicer-novnc&#xD;
+https://hub.docker.com/r/mikeah/prusaslicer-novnc</Overview>
   <Category>HomeAutomation: Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
   <Icon>https://cdn.help.prusa3d.com/wp-content/uploads/PSlogo-1-300x300.jpg</Icon>
   <ExtraParams/>
@@ -25,18 +25,18 @@ https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Overview>
   <DateInstalled>1643567143</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>Built by MikeAH for unraid users to enjoy the ease of prusaslicer in their browser.&#xD;
+  <Description>Enjoy Prusaslicer directly in your browser with this easy to use Docker container.&#xD;
 &#xD;
 This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
 &#xD;
-https://github.com/dmagyar/prusaslicer-vnc-docker&#xD;
-https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Description>
+https://github.com/mikeah/prusaslicer-novnc&#xD;
+https://hub.docker.com/r/mikeah/prusaslicer-novnc</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>6080</HostPort>
-        <ContainerPort>80</ContainerPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -47,22 +47,8 @@ https://hub.docker.com/r/dmagyar/prusaslicer-vnc-docker/</Description>
       <ContainerDir>/root/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir>/dev/shm</HostDir>
-      <ContainerDir>/dev/shm</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
   </Data>
-  <Environment>
-    <Variable>
-      <Value>--startup /Slic3r/slic3r-dist/prusa-slicer</Value>
-      <Name>OPENBOX_ARGS</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
   <Labels/>
   <Config Name="Root Folder/Data" Target="/root/" Default="/mnt/cache/appdata/prusaslicer" Mode="rw" Description="Container Path: /root/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/prusaslicer</Config>
-  <Config Name="/dev/shm" Target="/dev/shm" Default="/dev/shm" Mode="rw" Description="Container Path: /dev/shm" Type="Path" Display="always" Required="true" Mask="false">/dev/shm</Config>
-  <Config Name="OPENBOX_ARGS" Target="OPENBOX_ARGS" Default="--startup /Slic3r/slic3r-dist/prusa-slicer" Mode="" Description="Container Variable: OPENBOX_ARGS" Type="Variable" Display="always" Required="true" Mask="false">--startup /Slic3r/slic3r-dist/prusa-slicer</Config>
-  <Config Name="VNC Interface" Target="80" Default="6078" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
 </Container>
