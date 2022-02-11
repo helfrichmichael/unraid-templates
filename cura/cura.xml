@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>cura-novnc</Name>
+  <Repository>mikeah/cura-novnc</Repository>
+  <Registry>https://hub.docker.com/r/mikeah/cura-novnc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/mikeah/cura-novnc</Support>
+  <Project>https://ultimaker.com/software/ultimaker-cura</Project>
+  <Overview>Enjoy Cura directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/cura-novnc&#xD;
+https://hub.docker.com/r/mikeah/cura-novnc</Overview>
+  <Category>HomeAutomation: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://user-images.githubusercontent.com/22458343/85674332-9ed0bf00-b679-11ea-876f-ee5bb4e30a64.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644622368</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Enjoy Cura directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/cura-novnc&#xD;
+https://hub.docker.com/r/mikeah/cura-novnc</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/cura</HostDir>
+      <ContainerDir>/home/cura/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Labels/>
+  <Config Name="Configs folder" Target="/home/cura/" Default="/mnt/cache/appdata/cura" Mode="rw" Description="Container Path: /home/cura/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/cura</Config>
+  <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+</Container>
