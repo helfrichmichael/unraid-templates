@@ -43,12 +43,12 @@ https://hub.docker.com/r/mikeah/cura-novnc</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/cura</HostDir>
+      <HostDir>/mnt/user/appdata/cura</HostDir>
       <ContainerDir>/home/cura/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Labels/>
-  <Config Name="Home folder" Target="/home/cura/" Default="/mnt/cache/appdata/cura" Mode="rw" Description="Container Path: /home/cura/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/cura</Config>
+  <Config Name="Home folder" Target="/home/cura/" Default="/mnt/user/appdata/cura" Mode="rw" Description="Container Path: /home/cura/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cura</Config>
   <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
 </Container>

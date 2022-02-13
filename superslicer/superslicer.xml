@@ -43,7 +43,7 @@ https://hub.docker.com/r/mikeah/superslicer-novnc</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/superslicer</HostDir>
+      <HostDir>/mnt/user/appdata/superslicer</HostDir>
       <ContainerDir>/configs/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -56,7 +56,7 @@ https://hub.docker.com/r/mikeah/superslicer-novnc</Description>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Configs folder" Target="/configs/" Default="/mnt/cache/appdata/superslicer" Mode="rw" Description="Container Path: /configs/" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/superslicer</Config>
+  <Config Name="Configs folder" Target="/configs/" Default="/mnt/user/appdata/superslicer" Mode="rw" Description="Container Path: /configs/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/superslicer</Config>
   <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
   <Config Name="SSL_CERT_FILE" Target="SSL_CERT_FILE" Default="/etc/ssl/certs/ca-certificates.crt" Mode="" Description="Needed to allow Superslicer to open without any prompts upon startup." Type="Variable" Display="always" Required="true" Mask="false">/etc/ssl/certs/ca-certificates.crt</Config>
 </Container>
