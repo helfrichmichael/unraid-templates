@@ -47,8 +47,14 @@ https://hub.docker.com/r/mikeah/cura-novnc</Description>
       <ContainerDir>/home/cura/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/3D Printing/</HostDir>
+      <ContainerDir>/prints/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Labels/>
   <Config Name="Home folder" Target="/home/cura/" Default="/mnt/user/appdata/cura" Mode="rw" Description="Container Path: /home/cura/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cura</Config>
   <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="Prints" Target="/prints/" Default="/mnt/user/3D Printing/" Mode="rw" Description="3D Printing Folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/3D Printing/</Config>
 </Container>
