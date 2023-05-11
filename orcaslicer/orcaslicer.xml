@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>orcaslicer-novnc</Name>
+  <Repository>mikeah/orcaslicer-novnc</Repository>
+  <Registry>https://hub.docker.com/r/mikeah/orcaslicer-novnc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/mikeah/orcaslicer-novnc</Support>
+  <Project>https://github.com/SoftFever/OrcaSlicer</Project>
+  <Overview>Enjoy OrcaSlicer directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/orcaslicer-novnc&#xD;
+https://hub.docker.com/r/mikeah/orcaslicer-novnc</Overview>
+  <Category>HomeAutomation: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://user-images.githubusercontent.com/22458343/85674332-9ed0bf00-b679-11ea-876f-ee5bb4e30a64.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1644548224</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Enjoy OrcaSlicer directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/orcaslicer-novnc&#xD;
+https://hub.docker.com/r/mikeah/orcaslicer-novnc</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/orcaslicer</HostDir>
+      <ContainerDir>/configs/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/3D Printing/</HostDir>
+      <ContainerDir>/prints/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/etc/ssl/certs/ca-certificates.crt</Value>
+      <Name>SSL_CERT_FILE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Configs folder" Target="/configs/" Default="/mnt/user/appdata/orcaslicer" Mode="rw" Description="Container Path: /configs/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/orcaslicer</Config>
+  <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="SSL_CERT_FILE" Target="SSL_CERT_FILE" Default="/etc/ssl/certs/ca-certificates.crt" Mode="" Description="Needed to allow orcaslicer to open without any prompts upon startup." Type="Variable" Display="always" Required="true" Mask="false">/etc/ssl/certs/ca-certificates.crt</Config>
+  <Config Name="Prints" Target="/prints/" Default="/mnt/user/3D Printing/" Mode="rw" Description="3D Printing Folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/3D Printing/</Config>
+</Container>
