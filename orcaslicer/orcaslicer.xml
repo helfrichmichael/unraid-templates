@@ -18,7 +18,7 @@ https://hub.docker.com/r/mikeah/orcaslicer-novnc</Overview>
   <Category>HomeAutomation: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
-  <Icon>https://user-images.githubusercontent.com/22458343/85674332-9ed0bf00-b679-11ea-876f-ee5bb4e30a64.png</Icon>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Orca_icon_simple.svg/1200px-Orca_icon_simple.svg.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
