@@ -53,6 +53,18 @@ https://hub.docker.com/r/mikeah/cura-novnc</Description>
       <Mode>rw</Mode>
     </Volume>
   </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Home folder" Target="/home/cura/" Default="/mnt/user/appdata/cura" Mode="rw" Description="Container Path: /home/cura/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cura</Config>
   <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>

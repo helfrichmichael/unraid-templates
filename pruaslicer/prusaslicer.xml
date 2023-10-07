@@ -59,6 +59,16 @@ https://hub.docker.com/r/mikeah/prusaslicer-novnc</Description>
       <Name>SSL_CERT_FILE</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Configs folder" Target="/configs/" Default="/mnt/user/appdata/prusaslicer" Mode="rw" Description="Container Path: /configs/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/prusaslicer</Config>
