@@ -18,7 +18,7 @@ https://hub.docker.com/r/mikeah/cura-novnc</Overview>
   <Category>HomeAutomation: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL/>
-  <Icon>https://upload.wikimedia.org/wikipedia/en/9/9b/Logo_for_Cura_Software.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Ultimaker/Cura/main/resources/images/cura-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
