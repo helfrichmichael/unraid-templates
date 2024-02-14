@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>chitubox</Name>
+  <Repository>mikeah/chitubox-novnc</Repository>
+  <Registry>https://hub.docker.com/r/mikeah/chitubox-novnc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/mikeah/chitubox-novnc</Support>
+  <Project>https://ultimaker.com/software/ultimaker-chitubox</Project>
+  <Overview>Enjoy CHITUBOX directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/chitubox-novnc&#xD;
+https://hub.docker.com/r/mikeah/chitubox-novnc</Overview>
+  <Category>HomeAutomation: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon>https://media.imgcdn.org/repo/2023/03/chitubox-pro/chitubox-pro-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1707875493</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Enjoy CHITUBOX directly in your browser with this easy to use Docker container.&#xD;
+&#xD;
+This template has the minimum variables defined, but you can find additional details on the template at the URLs listed below.&#xD;
+&#xD;
+https://github.com/helfrichmichael/chitubox-novnc&#xD;
+https://hub.docker.com/r/mikeah/chitubox-novnc</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/chitubox</HostDir>
+      <ContainerDir>/home/chitubox/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/3D Printing/</HostDir>
+      <ContainerDir>/prints/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/etc/ssl/certs/ca-certificates.crt</Value>
+      <Name>SSL_CERT_FILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Home folder" Target="/home/chitubox/" Default="/mnt/user/appdata/chitubox" Mode="rw" Description="Container Path: /home/chitubox/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/chitubox</Config>
+  <Config Name="VNC Interface" Target="8080" Default="6080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6080</Config>
+  <Config Name="SSL_CERT_FILE" Target="SSL_CERT_FILE" Default="/etc/ssl/certs/ca-certificates.crt" Mode="" Description="Needed to allow Prusaslicer to open without any prompts upon startup." Type="Variable" Display="always" Required="true" Mask="false">/etc/ssl/certs/ca-certificates.crt</Config>
+  <Config Name="Prints" Target="/prints/" Default="/mnt/user/3D Printing/" Mode="rw" Description="3D Printing Folder" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/3D Printing/</Config>
+</Container>
