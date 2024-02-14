@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>chitubox</Name>
+  <Name>chitubox-novnc</Name>
   <Repository>mikeah/chitubox-novnc</Repository>
   <Registry>https://hub.docker.com/r/mikeah/chitubox-novnc</Registry>
   <Network>bridge</Network>
